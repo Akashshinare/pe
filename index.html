@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Engineering</title>
+
+        <!-- 
+    - favicon
+  -->
+        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+        <!-- 
+    - custom css link
+  -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- 
+    - google font link
+  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- 
+    - #HEADER
+  -->
+
+        <header class="header" data-header>
+            <div class="container">
+
+                <h2>Prompt Engineering</h2>
+                <nav class="navbar" data-navbar>
+                    <ul class="navbar-list">
+
+                        <li>
+                            <a href="#home" class="navbar-link"
+                                data-nav-link>Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#browse" class="navbar-link"
+                                data-nav-link>Browse Prompts</a>
+                        </li>
+
+                        <li>
+                            <a href="#blog" class="navbar-link"
+                                data-nav-link>Customization Tools</a>
+                        </li>
+
+                        <li>
+                            <a href="#blog" class="navbar-link"
+                                data-nav-link>Usage Analytics</a>
+                        </li>
+
+                        <li>
+                            <a href="#blog" class="navbar-link"
+                                data-nav-link>Billing & Reports</a>
+                        </li>
+
+                        <li>
+                            <a href="#blog" class="navbar-link"
+                                data-nav-link>Collaboration & Feedback</a>
+                        </li>
+
+                        <li>
+                            <a href="#blog" class="navbar-link"
+                                data-nav-link>Documentation & Report</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <main>
+            <article>
+
+                <!-- 
+        - #HERO
+      -->
+
+                <section class="section hero" id="home">
+                    <div class="container">
+
+                        <div class="hero-content">
+                            <h2 class="h1 hero-title">Welcome to Prompt Library
+                                Initiative</h2>
+                            <p class="hero-text">
+                                The Prompt Library Initiative aims to provide a
+                                comprehensive resource library for technology
+                                enthusiasts, focusing on engineers and
+                                developers.
+                            </p>
+                        </div>
+
+                        <div class="container">
+                            <h2 class="section-title">Highlights of Featured
+                                Prompts or Recent Additions</h2>
+                            <div class="highlights-list" id="highlights-list">
+                                <!-- Replace with prompt cards -->
+                                <div class="prompt-card">
+                                    <img src="prompt1.jpg" alt="Prompt 1">
+                                    <h3>Prompt Title 1</h3>
+                                    <p>Description of Prompt 1</p>
+                                    <a href="#"
+                                        class="btn explore-btn">Explore</a>
+                                </div>
+                                <div class="prompt-card">
+                                    <img src="prompt2.jpg" alt="Prompt 2">
+                                    <h3>Prompt Title 2</h3>
+                                    <p>Description of Prompt 2</p>
+                                    <a href="#"
+                                        class="btn explore-btn">Explore</a>
+                                </div>
+                                <!-- Add more prompt cards as needed -->
+                            </div>
+                            <div class="add-prompt">
+                                <button id="add-prompt-btn">Add Prompt</button>
+                            </div>
+                        </div>
+
+                        <div class="hero-banner"></div>
+
+                        <form action class="hero-form">
+
+                            <div class="input-wrapper">
+                                <li><a href="#section1">Section 1</a></li>
+
+                                <section id="section1">
+                                    <p>This is the content of section 1.</p>
+                                </section>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <li><a href="#section2">Section 2</a></li>
+
+                                <section id="section2">
+                                    <p>This is the content of section 2.</p>
+                                </section>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <li><a href="#section3">Section 3</a></li>
+
+                                <section id="section3">
+                                    <p>This is the content of section 3.</p>
+                                </section>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <li><a href="#section3">Section 3</a></li>
+
+                                <section id="section3">
+                                    <p>This is the content of section 3.</p>
+                                </section>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </section>
+
+                <!-- 
+        - #FEATURED CAR
+      -->
+      <section class="section browse" id="browse">
+        <div class="container">
+    
+            <h2 class="h2 section-title">Browse Prompts</h2>
+    
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search prompts...">
+                    <button onclick="searchPrompts()">Search</button>
+                </div>
+                <div class="filter-options">
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="">All</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Science">Science</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <label for="complexity">Complexity:</label>
+                    <select id="complexity">
+                        <option value="">All</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <!-- Add more filter options like tags, etc. -->
+                    <button onclick="filterPrompts()">Apply Filters</button>
+                </div>
+                <div class="prompt-display" id="prompt-display">
+                    <!-- Prompt items will be displayed here -->
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+
+                <section class="section tools" id="tools">
+                    <div class="container">
+
+                        <h2 class="h2 section-title">Customization Tools</h2>
+
+                        <ul class="tools-list has-scrollbar">
+
+                            <li>
+                                <div class="tools-card">
+                                    <div class="formatting-tools">
+                                        <label for="fontSize">Font Size:</label>
+                                        <select id="fontSize"
+                                            class="font-size-select"
+                                            onchange="changeFontSize()">
+                                            <option value="12px">12px</option>
+                                            <option value="14px">14px</option>
+                                            <option value="16px">16px</option>
+                                            <option value="18px">18px</option>
+                                        </select>
+                                        <button class="format-button"
+                                            onclick="formatText('bold')">Bold</button>
+                                        <button class="format-button"
+                                            onclick="formatText('italic')">Italic</button>
+                                        <button class="format-button"
+                                            onclick="formatText('underline')">Underline</button>
+
+                                        <button class="list-button"
+                                            onclick="addList('bullet')">Add
+                                            Bullets</button>
+                                        <button class="list-button"
+                                            onclick="addList('numbered')">Add
+                                            Numbered List</button>
+                                        <button class="link-button"
+                                            onclick="addLink()">Add
+                                            Link</button>
+                                        <input type="text" id="largeInput"
+                                            class="styled-input"
+                                            placeholder="Enter your text here"
+                                            style="width: 100%; height: 500px; padding: 10px 15px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; text-align: left; display: block; margin: 10px 0;">
+                                    </div>
+                                    <button class="save-button"
+                                        onclick="savePrompt()">Save
+                                        Prompt</button>
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </section>
+
+                <!-- 
+        - #GET START
+      -->
+
+                <section class="section get-start">
+                    <div class="container">
+
+                        <h2 class="h2 section-title">Usage Analytics
+                        </h2>
+
+                        <div class="get-start-card">
+                            <div class="prompt-frequency">
+                                <h4>Prompt Frequency</h4>
+                                <p>Total Prompts: <span
+                                        id="total-prompts">0</span></p>
+                                <p>Customized Prompts: <span
+                                        id="customized-prompts">0</span></p>
+                            </div>
+                            <div class="user-feedback">
+                                <h4>User Feedback</h4>
+                                <p>Average Rating: <span
+                                        id="average-rating">0</span></p>
+                                <p>Total Feedback: <span
+                                        id="total-feedback">0</span></p>
+                            </div>
+                            <div class="billing-information">
+                                <h4>Billing Information</h4>
+                                <p>Average Cost: <span
+                                        id="average-cost">$0.00</span></p>
+                                <p>Total Cost: <span
+                                        id="total-cost">$0</span></p>
+                            </div>
+                            <div class="continuous-improvement"
+                                style="width:1200px">
+                                <h3>Continuous Improvement</h3>
+                                <p>Analyze usage trends and user feedback to
+                                    identify areas for improvement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section billing" id="billing">
+                    <div class="container">
+                        <h2 class="section-title">Billing Settings & Usage
+                            Reports</h2>
+
+                        <div class="admin-dashboard">
+                            <!-- Billing Settings -->
+                            <div class="billing-settings">
+                                <!-- Billing Cycle Customization Form -->
+                                <form id="billing-cycle-form">
+                                    <!-- Billing Cycle Customization Inputs -->
+                                    <input type="text" id="business-unit"
+                                        placeholder="Business Unit">
+                                    <input type="text" id="billing-cycle"
+                                        placeholder="Billing Cycle">
+                                    <button type="submit">Save</button>
+                                </form>
+                            </div>
+
+                            <!-- Usage Reports -->
+                            <div class="usage-reports">
+                                <!-- Report Generation Form -->
+                                <form id="report-generation-form">
+                                    <!-- Report Generation Inputs -->
+                                    <input type="text" id="start-date"
+                                        placeholder="Start Date">
+                                    <input type="text" id="end-date"
+                                        placeholder="End Date">
+                                    <button type="submit">Generate
+                                        Report</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Remaining Billing Content Goes Here -->
+                        <div class="billing">
+                            <!-- Billing Content -->
+                            <div class="billing-item">
+                                <h3>Comprehensive Guides on Prompt
+                                    Customization</h3>
+                                <p>Explore our comprehensive guides to learn how
+                                    to customize prompts according to your
+                                    preferences.</p>
+                                <a href="guides.html" class="resource-link">View
+                                    Guides</a>
+                            </div>
+
+                            <!-- Add other billing items as needed -->
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section feedback" id="feedback">
+                    <div class="container">
+
+                        <h2 class="h2 section-title">Collaboration &
+                            Feedback</h2>
+                        <ul class="feedback has-scrollbar">
+                                <div class="feedback">
+
+                                    <div class="card-content">
+                                        <form id="feedback-form">
+                                            <label
+                                                for="feedback">Feedback:</label>
+                                            <textarea id="feedback"
+                                                name="feedback" rows="4"
+                                                required></textarea>
+                                            <label for="suggestion">Suggest a
+                                                New Prompt:</label>
+                                            <textarea id="suggestion"
+                                                name="suggestion" rows="4"
+                                                required></textarea>
+                                            <label for="customization">Share
+                                                Your Customization:</label>
+                                            <textarea id="customization"
+                                                name="customization" rows="4"
+                                                required></textarea>
+                                            <button
+                                                type="submit">Submit</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                         
+
+                        </ul>
+
+                    </div>
+                </section>
+
+                <section class="resources" id="resources">
+                    <div class="con">
+                        <h2 class="section">Resources</h2>
+
+                        <div class="resources">
+                            <h3>Comprehensive Guides on Prompt
+                                Customization</h3>
+                            <p>Explore our comprehensive guides to learn how to
+                                customize prompts according to your
+                                preferences.</p>
+                            <a href="guides.html" class="resource-link">View
+                                Guides</a>
+                        </div>
+
+                        <div class="resources">
+                            <h3>Best Practices for Prompt Selection and
+                                Usage</h3>
+                            <p>Discover the best practices for selecting and
+                                using prompts effectively to achieve your
+                                goals.</p>
+                            <a href="best-practices.html"
+                                class="resource-link">Learn More</a>
+                        </div>
+
+                        <div class="resources">
+                            <h3>Troubleshooting FAQs and Tips</h3>
+                            <p>Find answers to frequently asked questions and
+                                troubleshooting tips to resolve common
+                                issues.</p>
+                            <a href="faqs.html" class="resource-link">Browse
+                                FAQs</a>
+                        </div>
+
+                        <div class="resources">
+                            <h3>Contact Information for Technical Support</h3>
+                            <p>Contact our technical support team for assistance
+                                with any technical inquiries or issues.</p>
+                            <p>Email: support@example.com</p>
+                            <p>Phone: 123-456-7890</p>
+                        </div>
+
+                    </div>
+                </section>
+
+            </article>
+        </main>
+
+        <!-- 
+    - #FOOTER
+  -->
+
+        <footer class="footer">
+            <div class="container">
+
+                <div class="footer-top">
+
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <img src="./assets/images/logo.svg"
+                                alt="Prompt Engineering">
+                        </a>
+
+                        <p class="footer-text">
+                            The Prompt Library Initiative aims to provide a
+                            comprehensive resource library for technology
+                            enthusiasts, focusing on engineers and developers.
+                        </p>
+                    </div>
+
+                    <ul class="footer-list">
+
+                        <li>
+                            <p class="footer-list-title">Company</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">About
+                                us</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Pricing
+                                plans</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Our
+                                blog</a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="footer-link">Contacts</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="footer-list">
+
+                        <li>
+                            <p class="footer-list-title">Support</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Help
+                                center</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Ask a
+                                question</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Privacy
+                                policy</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Terms &
+                                conditions</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer-bottom">
+
+                    <ul class="social-list">
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon
+                                    name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon
+                                    name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon
+                                    name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon
+                                    name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon
+                                    name="logo-skype"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon
+                                    name="mail-outline"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <p class="copyright">
+                        &copy; 2024 <a href="#">codewithAkash</a>.
+                        All
+                        Rights
+                        Reserved
+                    </p>
+
+                </div>
+
+            </div>
+        </footer>
+
+        <!-- 
+    - custom js link
+  -->
+        <script src="main.js"></script>
+
+        <!-- 
+    - ionicon link
+  -->
+        <script type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    </body>
+
+</html>
